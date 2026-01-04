@@ -1,5 +1,8 @@
 # Cloud Dashboard
 
+![Test and Deploy](https://github.com/Madmaxim22/cloud-dashboard-frontend/workflows/Test%20and%20Deploy/badge.svg)
+[![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)](https://madmaxim22.github.io/cloud-dashboard-frontend/)
+
 Frontend приложение для управления облачными серверами, реализованное с использованием современных веб-технологий. Приложение позволяет оператору создавать, запускать, останавливать и удалять облачные сервера через интуитивный веб-интерфейс.
 
 ## Описание проекта
