@@ -1,0 +1,234 @@
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+/* Стили для основного контейнера дашборда */
+.dashboard {
+  display: flex;
+  gap: 20px;
+  min-height: 600px;
+}
+
+/* Стили для секции инстансов */
+.instances-section {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.instances-section h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+/* Стили для контейнера инстансов */
+.instances-container {
+  margin-bottom: 20px;
+}
+
+.instance-card {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.instance-card .instance-id {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dee2e6;
+  color: #495057;
+}
+
+.instance-card .status {
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.status-running {
+  color: #28a745;
+}
+
+.status-stopped {
+  color: #dc3545;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.actions-label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #495057;
+  flex: 0 0 auto;
+}
+
+.btn-start, .btn-stop, .btn-delete {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  flex: 1;
+  max-width: 120px;
+}
+
+.btn-start {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-start:hover {
+  background-color: #218838;
+}
+
+.btn-stop {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.btn-stop:hover {
+  background-color: #e0a800;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
+}
+
+.btn-create {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.btn-create:hover {
+  background-color: #0056b3;
+}
+
+/* Стили для секции Worklog */
+.worklog-section {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.worklog-section h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.worklog-container {
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #f8f9fa;
+}
+
+.worklog-entry {
+  padding: 8px;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.worklog-timestamp {
+  font-weight: bold;
+  color: #6c757d;
+}
+
+.worklog-server {
+  color: #495057;
+}
+
+.worklog-type {
+  color: #007bff;
+}
+
+.worklog-entry:last-child {
+  border-bottom: none;
+}
+
+.worklog-entry.received {
+  color: #007bff;
+}
+
+.worklog-entry.created {
+  color: #28a745;
+}
+
+.worklog-entry.started {
+  color: #28a745;
+}
+
+.worklog-entry.stopped {
+  color: #ffc107;
+}
+
+.worklog-entry.removed {
+  color: #dc3545;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+}

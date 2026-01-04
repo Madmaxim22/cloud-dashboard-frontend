@@ -3,9 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Cloud Dashboard</title>
 </head>
 <body>
-  
+  <div class="container">
+    <header>
+      <h1>Cloud Dashboard</h1>
+    </header>
+    
+    <main class="dashboard">
+      <section class="instances-section">
+        <h2>Your micro instances:</h2>
+        <div class="instances-container" id="instancesContainer">
+          <!-- Instances will be rendered here -->
+        </div>
+        <button id="createInstanceBtn" class="btn-create">Create new instance</button>
+      </section>
+      
+      <section class="worklog-section">
+        <h2>Worklog:</h2>
+        <div class="worklog-container" id="worklogContainer">
+          <!-- Worklog entries will be displayed here -->
+        </div>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
